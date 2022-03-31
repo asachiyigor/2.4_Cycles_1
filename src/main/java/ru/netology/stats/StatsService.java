@@ -11,11 +11,7 @@ public class StatsService {
     }
 
     public static int avgSummOfSalesPerMonth(long[] sales) {
-        int sum = 0;
-        for (long summ : sales) {
-            sum += summ;
-        }
-        return sum / sales.length;
+        return summOfSales(sales) / sales.length;
     }
 
     public static int monthWithMaxOfSales(long[] sales) {
@@ -44,13 +40,8 @@ public class StatsService {
 
     public static int countMonthWithLowerAvgOfSales(long[] sales) {
         int countMonth = 0;
-        int sum = 0;
-        for (long summ : sales) {
-            sum += summ;
-        }
-        long avgOfSales = sum / sales.length;
         for (long avg : sales) {
-            if (avg < avgOfSales) {
+            if (avg < avgSummOfSalesPerMonth(sales)) {
                 countMonth++;
             }
         }
@@ -59,13 +50,8 @@ public class StatsService {
 
     public static int countMonthWithHigherAvgOfSales(long[] sales) {
         int countMonth = 0;
-        int sum = 0;
-        for (long summ : sales) {
-            sum += summ;
-        }
-        long avgOfSales = sum / sales.length;
         for (long avg : sales) {
-            if (avg >= avgOfSales) {
+            if (avg >= avgSummOfSalesPerMonth(sales)) {
                 countMonth++;
             }
         }
