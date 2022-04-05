@@ -9,10 +9,10 @@ class StatsServiceTest {
     @Test
     void shouldCalculateSummOfSales() {
 
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 180;
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 180;
 
-        long actual = StatsService.summOfSales(sales);
+        int actual = StatsService.summOfSales(sales);
 
         assertEquals(expected, actual);
 
@@ -21,10 +21,10 @@ class StatsServiceTest {
     @Test
     void shouldCalculateAvgSummOfSalesPerMonths() {
 
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 15;
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 15;
 
-        long actual = StatsService.avgSummOfSalesPerMonth(sales);
+        int actual = StatsService.avgSummOfSalesPerMonth(sales);
 
         assertEquals(expected, actual);
 
@@ -33,10 +33,10 @@ class StatsServiceTest {
     @Test
     void shouldCalculateMonthWithMaxOfSales() {
 
-        long[] sales = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
-        long expected = 6;
+        int[] sales = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
+        int expected = 6;
 
-        long actual = StatsService.monthWithMaxOfSales(sales);
+        int actual = StatsService.monthWithMaxOfSales(sales);
 
         assertEquals(expected, actual);
 
@@ -45,10 +45,10 @@ class StatsServiceTest {
     @Test
     void shouldCalculateMonthWithMinOfSales() {
 
-        long[] sales = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
-        long expected = 9;
+        int[] sales = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
+        int expected = 9;
 
-        long actual = StatsService.monthWithMinOfSales(sales);
+        int actual = StatsService.monthWithMinOfSales(sales);
 
         assertEquals(expected, actual);
 
@@ -57,10 +57,10 @@ class StatsServiceTest {
     @Test
     void shouldCalculateCountMonthWithLowerAvgOfSales() {
 
-        long[] sales = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
-        long expected = 5;
+        int[] sales = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
+        int expected = 5;
 
-        long actual = StatsService.countMonthWithLowerAvgOfSales(sales);
+        int actual = StatsService.countMonthWithLowerAvgOfSales(sales);
 
         assertEquals(expected, actual);
 
@@ -69,10 +69,10 @@ class StatsServiceTest {
     @Test
     void shouldCalculateCountMonthWithHigherAvgOfSales() {
 
-        long[] sales = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
-        long expected = 7;
+        int[] sales = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
+        int expected = 7;
 
-        long actual = StatsService.countMonthWithHigherAvgOfSales(sales);
+        int actual = StatsService.countMonthWithHigherAvgOfSales(sales);
 
         assertEquals(expected, actual);
 
